@@ -29,12 +29,15 @@ def yes_no(question_text):
 
 # Function to display instructions
 def instructions():
-    print("***** How To Play *****")
+    print("***** How To Play the Quizzes *****")
     print()
-    print("The Rules Of The Game Go Here")
+    print("You can select from either easy, medium or hard quizzes")
     print()
-    print("Program Continues")
+    print("Enter t or f to answer true or false")
     print()
+    print("At the end you will receive a score out of ten \ndepending on how may you got right")
+    print()
+    print("You can try again as many times as you like")
 
 
 # Main routine goes here
