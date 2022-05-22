@@ -1,44 +1,45 @@
 """  game mechanics v1
-Creating functions that hold information about the quizzes
+Creating functions that hold information about a quiz
+and have a playable quiz function
 
 """
 
+questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"]
+question_values = ["f", "t", "t", "f", "t", "f", "t", "f", "f", "t"]
+questions_text = [("Toru means one in Maori"),
+                  "Whitu is number seven",
+                  "Tekau is ten",
+                  "Tahi is number three",
+                  "Rima is five",
+                  "Kore is nine",
+                  "Ono is six",
+                  "Waru is two",
+                  "Rua is eight",
+                  "Iwa is nine"]
+answer_storer = ""
+score = int(0)
+total_questions = int(0)
+quiz_loop_breaker = ""
 
-def quizzes(question_text):
-    questions_text = [("Toru means one in Maori"),
-                      "Whitu is number seven",
-                      "Tekau is ten",
-                      "Tahi is number three",
-                      "Rima is five",
-                      "Kore is nine",
-                      "Ono is six",
-                      "Waru is two",
-                      "Rua is eight",
-                      "Iwa is nine"]
-    questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"]
-    current_question = questions_nums[0]
-    while True:
+for questions_printer in range(len(questions_nums)):
+    print(questions_nums[questions_printer])
+    print(questions_text[questions_printer])
+    answer_storer = input("enter answer here: ").lower()
+    quiz_loop_breaker = "x"
+    while quiz_loop_breaker == "x":
+        if answer_storer == "f" or answer_storer == "t":
+            if answer_storer == question_values[questions_printer]:
+                print("You got it right!")
+                score += 1
+                total_questions += 1
+                quiz_loop_breaker = "y"
 
-        # Ask the user what difficulty they want
-        answer = input(question_text).lower()
+            elif answer_storer != question_values[questions_printer]:
+                print("You got it wrong!")
+                total_questions += 1
+                quiz_loop_breaker = "y"
 
-        # If they say 1, output: program continues on easy
-        if answer == "1" or answer == "one":
-            answer = "1"
-
-            while current_question != "t" or "true" or "f" or "false":
-
-                print(questions_text[0])
-                question = input().lower()
-                if question == "t" or question == "true":
-                    print("You got it right!")
-
-                elif question == "f" or "false":
-                    print("unfortunate, that's incorrect!")
-                else:
-                    print("Please enter either True or False")
-
-
-# Gets the difficulty the user wants and runs the quiz
-quizzes("What difficulty do you want to play?\n"
-        "1 for easy, 2 for medium, 3 for hard: ")
+        else:
+            print("please enter a valid input, (t or f)")
+            quiz_loop_breaker = "y"
+print(f"You got {score} out of {total_questions}")
