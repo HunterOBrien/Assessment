@@ -1,15 +1,15 @@
-months_questions = [("Kohitatea is January", True),
-                    ("Hui-tangaru is March", False),
-                    ("Poutu-te-rangi is September", False),
-                    ("Paenga-whawha is December", False),
-                    ("Haratua is May", True),
-                    ("Pipiri is June", True),
-                    ("Hongongoi is July", True),
-                    ("Here-turi-koka is November", False),
-                    ("Maharu is March", False),
-                    ("Whiringa-a-nuku is October", True),
-                    ("Whiringa-a-rangi is November", True),
-                    ("Hakihea is January", False)]
+months_questions = ["Kohitatea is January",
+                    "Hui-tangaru is March",
+                    "Poutu-te-rangi is September",
+                    "Paenga-whawha is December",
+                    "Haratua is May",
+                    "Pipiri is June",
+                    "Hongongoi is July",
+                    "Here-turi-koka is November",
+                    "Maharu is March",
+                    "Whiringa-a-nuku is October",
+                    "Whiringa-a-rangi is November"
+                    "Hakihea is January"]
 
 days_questions = [("There are two different Maori names for each day of the week", True),
                   ("Rahina is one name for Monday", True),
@@ -32,5 +32,4 @@ numbers_questions = ["Toru means one in Maori",
                      "Iwa is nine"]
 
 
-for questions_printer in range(len(questions_nums)):
-        print(a[questions_printer])
+

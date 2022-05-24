@@ -9,12 +9,13 @@ difficulty = input("What difficulty do you want to play?\n"
 # If they say 1, program continues on easy
 if difficulty == "1" or difficulty == "one":
     print("Program continues (easy)")
-# If they say 1, program continues on medium
+# If they say 2, program continues on medium
 elif difficulty == "2" or difficulty == "two":
     print("Program continues (medium)")
 
+# If they say 3
 elif difficulty == "3" or difficulty == "three":
-    print("Pr")
+    print("Program continues")
 # otherwise, show error
 else:
     print("Please answer 1, 2, or 3")

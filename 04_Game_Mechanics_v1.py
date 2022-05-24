@@ -1,11 +1,13 @@
 """  game mechanics v1
-Creating functions that hold information about a quiz
-and have a playable quiz function
+Creating a playable quiz that gives the users score
 
 """
 
 questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"]
+
+# Determines whether a question is true or false
 question_values = ["f", "t", "t", "f", "t", "f", "t", "f", "f", "t"]
+# Quiz questions
 questions_text = [("Toru means one in Maori"),
                   "Whitu is number seven",
                   "Tekau is ten",
