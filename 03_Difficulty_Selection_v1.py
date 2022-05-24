@@ -6,12 +6,15 @@ difficulty = input("What difficulty do you want to play?\n"
                    "1 for easy, 2 for medium, 3 for hard: ").lower()
 
 
-# If they say yes, output: program continues
+# If they say 1, program continues on easy
 if difficulty == "1" or difficulty == "one":
-    print("Program continues")
-# If they say no, output: display instructions
+    print("Program continues (easy)")
+# If they say 1, program continues on medium
 elif difficulty == "2" or difficulty == "two":
-    print("Give instructions")
+    print("Program continues (medium)")
+
+elif difficulty == "3" or difficulty == "three":
+    print("Pr")
 # otherwise, show error
 else:
     print("Please answer 1, 2, or 3")
