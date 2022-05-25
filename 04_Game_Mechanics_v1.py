@@ -18,11 +18,16 @@ questions_text = [("Toru means one in Maori"),
                   "Waru is two",
                   "Rua is eight",
                   "Iwa is nine"]
+# Stores the last answer
 answer_storer = ""
+# Works out how many the player got right
 score = int(0)
+# Works out total question amount
 total_questions = int(0)
+# variable to break the quiz while loop
 quiz_loop_breaker = ""
 
+# For loop that does the actual quiz function
 for questions_printer in range(len(questions_nums)):
     print(questions_nums[questions_printer])
     print(questions_text[questions_printer])
@@ -44,4 +49,5 @@ for questions_printer in range(len(questions_nums)):
         else:
             print("please enter a valid input, (t or f)")
             quiz_loop_breaker = "y"
+# Tells the user their final score
 print(f"You got {score} out of {total_questions}")

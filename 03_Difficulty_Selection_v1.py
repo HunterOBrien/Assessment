@@ -13,9 +13,10 @@ if difficulty == "1" or difficulty == "one":
 elif difficulty == "2" or difficulty == "two":
     print("Program continues (medium)")
 
-# If they say 3
+# If they say 3, program continues on hard
 elif difficulty == "3" or difficulty == "three":
     print("Program continues")
+
 # otherwise, show error
 else:
     print("Please answer 1, 2, or 3")

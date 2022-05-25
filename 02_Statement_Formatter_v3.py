@@ -12,6 +12,7 @@ def formatter(symbol, text):
 
 
 # Main Routine
+# Calling the formatter function with the text and symbol
 print(formatter("-", "Welcome to the Te Reo quiz"))
 print()
 print(formatter("!", "You got 5/10 on the easy quiz"))

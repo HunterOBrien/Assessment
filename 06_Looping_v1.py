@@ -1,7 +1,7 @@
-""" Game_Mechanics v3
-    Adds different levels of difficulty that have separate quizzes
-
+""" Looping v1
+This turns the quizzes into a re-playable loop
 """
+
 
 # works out what difficulty the user wants
 def difficulty_selection(question_text):
@@ -163,6 +163,22 @@ def game_mechanics_hard():
                 print("please enter a valid input, (t or f)")
                 quiz_loop_breaker = "y"
     print(f"You got {score} out of {total_questions}")
+    looping()
+
+def looping():
+    print("Thanks for playing, would you like to play again?")
+    play_again = input("If you want to play again enter 'Y'\n"
+                       "If you do not want to play again enter 'N'\n "
+                       ":  ").upper()
+
+    while True:
+        if play_again == "Y" or play_again == "YES":
+            difficulty_selection()
+
+        elif play_again == "N" or play_again == "NO":
+            difficulty_selection()
+        else:
+            print("Please enter a valid input")
 
 
 # Gets the difficulty the user wants

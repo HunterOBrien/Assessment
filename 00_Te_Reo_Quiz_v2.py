@@ -1,9 +1,51 @@
-""" Game_Mechanics v3
-    Adds different levels of difficulty that have separate quizzes
-
+""" Te Reo Quiz base component v2
+components added after they have been created and tested
 """
 
-# works out what difficulty the user wants
+
+# Functions go here
+def yes_no(question_text):
+    while True:
+
+        # Ask the user if they have played before
+        answer = input(question_text).lower()
+
+        # If they say yes, output: program continues
+        if answer == "yes" or answer == "y":
+            answer = "Yes"
+            return answer
+
+        # If they say no, output: display instructions
+        elif answer == "no" or answer == "n":
+            answer = "No"
+            return answer
+
+        # otherwise, show error
+        else:
+            print("Please answer yes or no")
+
+
+# Function to display instructions
+def instructions():
+    print("***** How To Play the Quizzes *****")
+    print()
+    print("You can select from either easy, medium or hard quizzes")
+    print()
+    print("Enter t or f to answer true or false")
+    print()
+    print("At the end you will receive a score out of ten \ndepending on how may you got right")
+    print()
+    print("You can try again as many times as you like")
+
+
+# Function to format text object
+def formatter(symbol, text):
+    sides = symbol * 3
+    formatted_text = f"{sides} {text} {sides}"
+    top_bottom = symbol * len(formatted_text)
+    return f" {top_bottom}\n {formatted_text}\n {top_bottom}"
+
+
 def difficulty_selection(question_text):
     while True:
 
@@ -29,7 +71,6 @@ def difficulty_selection(question_text):
 
 # Easy quiz function
 def game_mechanics_easy():
-    # Stores quiz values
     questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"]
     question_values = ["f", "t", "t", "f", "t", "f", "t", "f", "f", "t"]
     questions_text = [("Toru means one in Maori"),
@@ -42,15 +83,11 @@ def game_mechanics_easy():
                       "Waru is two",
                       "Rua is eight",
                       "Iwa is nine"]
-    # Stores the previous answer and checks it against the question_values list
     answer_storer = ""
-    # Keeps track of your score and the amount of questions
     score = int(0)
     total_questions = int(0)
-    # Breaks the quiz loop
     quiz_loop_breaker = ""
 
-    # For loop that does the quiz with the given variables
     for questions_printer in range(len(questions_nums)):
         print(questions_nums[questions_printer])
         print(questions_text[questions_printer])
@@ -72,12 +109,11 @@ def game_mechanics_easy():
             else:
                 print("please enter a valid input, (t or f)")
                 quiz_loop_breaker = "y"
-    # Prints the users final score
-    print(f"You got {score} out of {total_questions}")
+    print(formatter("!", "Well Done"))
+    print(f"You got {score} out of {total_questions}!")
 
 
 # Medium quiz function
-# Check game_mechanics_easy for comments in the function
 def game_mechanics_medium():
     questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"]
     question_values = ["t", "t", "f", "f", "t", "t", "f", "f"]
@@ -116,11 +152,12 @@ def game_mechanics_medium():
             else:
                 print("please enter a valid input, (t or f)")
                 quiz_loop_breaker = "y"
+
+    print(formatter("!", "Well Done"))
     print(f"You got {score} out of {total_questions}")
 
 
 # Hard quiz function
-# Check game_mechanics_easy for comments in the function
 def game_mechanics_hard():
     questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"]
     question_values = ["t", "f", "f", "f", "t", "t", "t", "f", "f", "t", "t", "f"]
@@ -162,8 +199,20 @@ def game_mechanics_hard():
             else:
                 print("please enter a valid input, (t or f)")
                 quiz_loop_breaker = "y"
+    print(formatter("!", "Well Done"))
     print(f"You got {score} out of {total_questions}")
 
+
+# Main routine goes here
+print(formatter("-", "Welcome to the Te Reo quiz"))
+print()
+
+
+# Checks whether the user needs instructions
+played_before = yes_no("Have you played this game before? ")
+
+if played_before == "No":
+    instructions()
 
 # Gets the difficulty the user wants
 difficulty_selection("What difficulty do you want to play?\n"

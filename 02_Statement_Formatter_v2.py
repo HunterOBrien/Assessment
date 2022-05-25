@@ -3,6 +3,7 @@
 """
 
 
+# Function to format text
 def formatter(symbol, text):
     sides = symbol * 3
     formatted_text = f"{sides} {text} {sides}"
