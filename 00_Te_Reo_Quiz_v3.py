@@ -33,7 +33,7 @@ def instructions():
     print()
     print("Enter t or f to answer true or false")
     print()
-    print("At the end you will receive a score out of ten \ndepending on how may you got right")
+    print("At the end you will receive a score that depends on how many you got right")
     print()
     print("You can try again as many times as you like")
 
@@ -118,7 +118,7 @@ def game_mechanics_easy():
 def game_mechanics_medium():
     questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"]
     question_values = ["t", "t", "f", "f", "t", "t", "f", "f"]
-    questions_text = ["There are two different Maori names for each day of the week",
+    questions_text = ["There is more than one name in Maori for each day of the week",
                       "Rahina is one name for Monday",
                       "Ratu is a name for Wednesday",
                       "Raapa is a name for Monday",
