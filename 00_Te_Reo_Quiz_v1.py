@@ -35,30 +35,10 @@ def instructions():
     print()
 
 
-# Number checking function
-def num_check(question, low, high):
-    error = "That was not a valid input\n" \
-            "Please enter a whole number between {} and {}\n".format(low, high)
-
-    # Keep asking until a valid amount is given
-    while True:
-        try:
-            # Ask for amount
-            response = int(input(question))
-
-            # Check for num in required range
-            if low <= response <= high:
-                return response
-
-            else:
-                print(error)
-
-        except ValueError:
-            print(error)
-
-
 # Main routine goes here
 # Checks whether the user needs instructions
+print("Welcome to the Te Reo Quiz!")
+print()
 played_before = yes_no("Have you played this game before? ")
 
 if played_before == "No":
