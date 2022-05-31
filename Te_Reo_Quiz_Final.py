@@ -1,5 +1,5 @@
-""" Te Reo Quiz base component v3
-components added after they have been created and tested
+""" Te Reo Quiz Final
+Final Version
 """
 
 
@@ -33,7 +33,8 @@ def instructions():
     print()
     print("Enter t or f to answer true or false")
     print()
-    print("At the end you will receive a score that depends on how many you got right")
+    print("At the end you will receive a score ")
+    print("This depends on how many you got right")
     print()
     print("You can try again as many times as you like")
 
@@ -71,7 +72,8 @@ def difficulty_selection(question_text):
 
 # Easy quiz function
 def game_mechanics_easy():
-    questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"]
+    questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7",
+                      "q8", "q9", "q10"]
     question_values = ["f", "t", "t", "f", "t", "f", "t", "f", "f", "t"]
     questions_text = [("Toru means one in Maori"),
                       "Whitu is number seven",
@@ -118,7 +120,8 @@ def game_mechanics_easy():
 def game_mechanics_medium():
     questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"]
     question_values = ["t", "t", "f", "f", "t", "t", "f", "f"]
-    questions_text = ["There is more than one name in Maori for each day of the week",
+    questions_text = ["There is more than one name in Maori \n"
+                      "for each day of the week",
                       "Rahina is one name for Monday",
                       "Ratu is a name for Wednesday",
                       "Raapa is a name for Monday",
@@ -162,7 +165,8 @@ def game_mechanics_medium():
 # Hard quiz function
 def game_mechanics_hard():
     questions_nums = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"]
-    question_values = ["t", "f", "f", "f", "t", "t", "t", "f", "f", "t", "t", "f"]
+    question_values = ["t", "f", "f", "f", "t", "t", "t", "f",
+                       "f", "t", "t", "f"]
     questions_text = ["Kohitatea is January",
                       "Hui-tangaru is March",
                       "Poutu-te-rangi is September",
